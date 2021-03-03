@@ -69,6 +69,7 @@
     <Compile Include="Assets\Enviroment\enviroment\Office building\scripts\Fix_elevator_fall.cs" />
     <Compile Include="Assets\Enviroment\enviroment\Office building\scripts\evelator_controll.cs" />
     <Compile Include="Assets\Enviroment\enviroment\Office building\scripts\pass_on_parent.cs" />
+    <Compile Include="Assets\Scripts\PersonajeDialogo.cs" />
     <Compile Include="Assets\Scripts\dialogControl.cs" />
     <None Include="Assets\Enviroment\enviroment\Office building\Read me.txt" />
     <Reference Include="UnityEngine">

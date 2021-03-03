@@ -5,14 +5,33 @@ using UnityEngine;
 
 public class dialogControl : MonoBehaviour
 {
+    //Singleton
+    public static dialogControl singleton;
+
     public GameObject dialogo;
     public Text txtDialogo;
     [Header("Config de teclado")]
     public KeyCode teclaSiguienteFrase;
+    public KeyCode teclaInicioDialogo = KeyCode.Space;
+    public KeyCode teclaInicioDialogo2 = KeyCode.A;
     [Header ("Lista Dialogos")]
     public Frase[] dialogoList;
 
     // Start is called before the first frame update
+
+
+    private void Awake()
+    {
+        if (singleton == null)
+        {
+            singleton = this;
+        }
+        else
+        {
+            DestroyImmediate(gameObject);
+        }
+    }
+
     void Start()
     {
         dialogo.SetActive(false);
@@ -45,4 +64,10 @@ public class Frase
 {
     public string texto;
 
+}
+
+[System.Serializable]
+public class EstadoDialogo
+{
+    public Frase[] lista;
 }
